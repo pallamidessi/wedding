@@ -1,0 +1,24 @@
+<html>
+  <body style="font-family: Arial, sans-serif; color: #222;">
+    <p>Hi {first_name},</p>
+
+    <p>
+      We are so happy to invite you to our wedding celebration. It would mean a
+      lot to us to have you there.
+    </p>
+
+    <p>
+      Please RSVP here:<br />
+      <a href="https://forms.gle/REPLACE_WITH_YOUR_FORM_ID">
+        https://forms.gle/REPLACE_WITH_YOUR_FORM_ID
+      </a>
+    </p>
+
+    <p>
+      You can find full details (travel, schedule, and contacts) on our wedding
+      website.
+    </p>
+
+    <p>With love,<br />Bea & Joseph</p>
+  </body>
+</html>
