@@ -186,7 +186,43 @@ h2 {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 14px;
-  padding: 1rem 1.1rem;
+  padding: 1.2rem 1.3rem;
+}
+
+.card h3 {
+  margin: 0 0 0.2rem;
+}
+
+.card h4 {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin: 0.8rem 0 0.3rem;
+}
+
+.card ul {
+  margin: 0 0 0.6rem;
+  padding-left: 1.2rem;
+}
+
+.card ul li {
+  margin-bottom: 0.25rem;
+  line-height: 1.5;
+}
+
+.card-subtitle {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0 0 0.4rem;
+}
+
+.stay-note {
+  margin-top: 1.2rem;
+  text-align: center;
+  color: var(--muted);
 }
 
 .map-wrap {
@@ -233,6 +269,36 @@ h2 {
   font-weight: 700;
 }
 
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-photos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-photo {
+  width: 100%;
+  border-radius: 14px;
+  object-fit: cover;
+  max-height: 280px;
+  border: 1px solid var(--border);
+}
+
+.about-text p {
+  line-height: 1.7;
+  margin: 0 0 1rem;
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
 .site-footer {
   border-top: 1px solid var(--border);
   padding: 1rem 0 2rem;
@@ -241,7 +307,8 @@ h2 {
 }
 
 @media (max-width: 800px) {
-  .two-col {
+  .two-col,
+  .about-content {
     grid-template-columns: 1fr;
   }
 

@@ -1,0 +1,17 @@
+{
+  "name": "wedding",
+  "version": "1.0.0",
+  "description": "This project gives you:",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "encrypt": "rm -rf site-encrypted && staticrypt site/index.html -t password_template.html --template-title 'Wedding Invitation' --template-instructions 'Please enter the password we shared with you to view our wedding details.' --template-placeholder 'Enter password...' --template-button 'View invitation' --template-error 'Incorrect password, please try again.' --remember 30 --template-remember 'Remember me for 30 days' -d site-encrypted --short && cp -r site/static site-encrypted/static"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "staticrypt": "^3.5.4"
+  }
+}
