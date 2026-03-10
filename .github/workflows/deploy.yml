@@ -1,0 +1,62 @@
+name: Deploy encrypted site to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Encrypt site
+        run: |
+          npx staticrypt site/index.html \
+            -p "${{ secrets.SITE_PASSWORD }}" \
+            -t password_template.html \
+            --template-title 'Wedding Invitation' \
+            --template-instructions 'Please enter the password we shared with you to view our wedding details.' \
+            --template-placeholder 'Enter password...' \
+            --template-button 'View invitation' \
+            --template-error 'Incorrect password, please try again.' \
+            --remember 30 \
+            --template-remember 'Remember me for 30 days' \
+            -d site-encrypted \
+            --short
+          cp -r site/static site-encrypted/static
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site-encrypted
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
