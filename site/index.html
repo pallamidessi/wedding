@@ -6,15 +6,15 @@
     <title>Beatrice & Joseph | Wedding</title>
     <meta
       name="description"
-      content="Join us for our wedding celebration at Château de Mairy, Champagne. Find travel info, timeline details, RSVP link, and contact information."
+      content="The wedding of Beatrice Drury and Joseph Pallamidessi, 1st May 2027 at Château de Mairy, Champagne. Schedule, venue, travel, accommodation, things to do and RSVP."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="static/css/styles.css" />
+    <link rel="stylesheet" href="static/css/styles.css?v=7" />
   </head>
   <body>
     <header class="site-header">
@@ -26,59 +26,88 @@
         <ul id="navLinks" class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About us</a></li>
-          <li><a href="#travel">How to get there</a></li>
-          <li><a href="#stay">Where to stay</a></li>
-          <li><a href="#timeline">Timeline</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li>
-            <a
-              class="btn btn-small"
-              href="https://forms.gle/REPLACE_WITH_YOUR_FORM_ID"
-              target="_blank"
-              rel="noopener noreferrer"
-              >RSVP</a
-            >
-          </li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#venue">Venue</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#things-to-do">Things to do</a></li>
+          <li><a href="#travel">Travel</a></li>
+          <li><a class="btn btn-small" href="#rsvp">RSVP</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
+      <!-- ============ HOME ============ -->
       <section id="home" class="hero">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-          <p class="eyebrow">We are getting married</p>
-          <h1>Beatrice & Joseph</h1>
-          <p class="hero-date">Saturday, May 1st, 2027</p>
-          <p class="hero-location">Château de Mairy, Champagne</p>
+          <p class="eyebrow">You are invited to the wedding of</p>
+          <h1><span class="name">Beatrice Drury</span> <span class="amp">&</span> <span class="name">Joseph Pallamidessi</span></h1>
+          <p class="hero-date">1st May 2027 &middot; Champagne, France</p>
           <div class="hero-actions">
-            <a
-              class="btn"
-              href="https://forms.gle/REPLACE_WITH_YOUR_FORM_ID"
-              target="_blank"
-              rel="noopener noreferrer"
-              >RSVP now</a
-            >
-            <a class="btn btn-secondary" href="#travel">Plan your trip</a>
+            <a class="btn" href="#rsvp">RSVP</a>
+            <a class="btn btn-secondary" href="#schedule">See the schedule</a>
           </div>
         </div>
       </section>
 
+      <section class="section intro">
+        <div class="container narrow">
+          <p class="lead">We are delighted to share our special day with you.</p>
+          <p>
+            This space has been created to guide you through all the details as
+            our wedding approaches, from venue information and RSVP to pre and
+            post event celebrations.
+          </p>
+          <p class="notice">
+            Please note: the website will be updated as details emerge closer to
+            the time, so please check back later for more updates.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ ABOUT ============ -->
       <section id="about" class="section section-alt">
         <div class="container">
           <h2>About us</h2>
           <div class="about-content">
-            <div class="about-photos">
-              <img
-                src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=600&q=80"
-                alt="Beatrice and Joseph together"
-                class="about-photo"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1529634597503-139d3726fed5?auto=format&fit=crop&w=600&q=80"
-                alt="Beatrice and Joseph engagement"
-                class="about-photo"
-              />
+            <div class="photo-pile" id="photoPile" aria-label="Photos of Beatrice and Joseph (click a photo to bring it to the top)">
+              <figure class="polaroid" style="--x: 0%; --y: 1%; --r: -7deg; --i: 0">
+                <img src="static/images/about/us-01.jpg" alt="Beatrice and Joseph above a beach in Portugal" loading="lazy" />
+              </figure>
+              <figure class="polaroid landscape" style="--x: 44%; --y: 9%; --r: -4deg; --i: 1">
+                <img src="static/images/about/us-02.jpg" alt="Beatrice and Joseph at a seaside dinner at sunset" loading="lazy" />
+              </figure>
+              <figure class="polaroid" style="--x: 70%; --y: 0%; --r: 6deg; --i: 2">
+                <img src="static/images/about/us-03.jpg" alt="Beatrice and Joseph in front of a palace" loading="lazy" />
+              </figure>
+              <figure class="polaroid" style="--x: 0%; --y: 63%; --r: -5deg; --i: 3">
+                <img src="static/images/about/us-04.jpg" alt="Beatrice and Joseph kayaking" loading="lazy" />
+              </figure>
+              <figure class="polaroid" style="--x: 47%; --y: 63%; --r: -6deg; --i: 4">
+                <img src="static/images/about/us-05.jpg" alt="Beatrice and Joseph under a Christmas light arch" loading="lazy" />
+              </figure>
+              <figure class="polaroid" style="--x: 70%; --y: 62%; --r: 4deg; --i: 5">
+                <img src="static/images/about/us-06.jpg" alt="Beatrice and Joseph at sunset on a bridge over a river" loading="lazy" />
+              </figure>
+              <figure class="polaroid" style="--x: 24%; --y: 34%; --r: -7deg; --i: 6">
+                <img src="static/images/about/us-07.jpg" alt="Beatrice and Joseph in cat ears at a festival" loading="lazy" />
+              </figure>
+              <figure class="polaroid" style="--x: 23%; --y: 65%; --r: 6deg; --i: 7">
+                <img src="static/images/about/us-08.jpg" alt="Beatrice and Joseph in a flower-filled conservatory" loading="lazy" />
+              </figure>
+              <figure class="polaroid" style="--x: 23%; --y: 3%; --r: 4deg; --i: 8">
+                <img src="static/images/about/us-09.jpg" alt="Beatrice and Joseph outside Hackney Town Hall" loading="lazy" />
+              </figure>
+              <figure class="polaroid" style="--x: 1%; --y: 32%; --r: 6deg; --i: 9">
+                <img src="static/images/about/us-10.jpg" alt="Beatrice and Joseph on a grand staircase with champagne" loading="lazy" />
+              </figure>
+              <figure class="polaroid" style="--x: 70%; --y: 34%; --r: 7deg; --i: 10">
+                <img src="static/images/about/us-11.jpg" alt="Beatrice and Joseph dressed up for a wedding" loading="lazy" />
+              </figure>
+              <figure class="polaroid" style="--x: 47%; --y: 31%; --r: -2deg; --i: 11">
+                <img src="static/images/about/us-12.jpg" alt="Beatrice and Joseph showing off the engagement ring" loading="lazy" />
+              </figure>
             </div>
             <div class="about-text">
               <p>
@@ -102,187 +131,633 @@
         </div>
       </section>
 
-      <section id="travel" class="section container">
-        <h2>How to get there</h2>
-        <p>
-          We will celebrate at <strong>Château de Mairy</strong>, 51240
-          Mairy-sur-Marne, a 17th-century Monument Historique set within 10
-          hectares of gardens and woodland in the heart of Champagne.
-        </p>
-        <div class="grid two-col">
-          <article class="card">
-            <h3>From Paris</h3>
-            <p class="card-subtitle">~1h40 by car / ~1h40 by train</p>
-            <h4>By car</h4>
-            <ul>
-              <li>Take the A4 motorway east towards Reims / Metz</li>
-              <li>Exit at Châlons-en-Champagne</li>
-              <li>Follow signs to Mairy-sur-Marne (~10 min)</li>
-            </ul>
-            <h4>By train</h4>
-            <ul>
-              <li>TGV from Paris-Est to Châlons-en-Champagne (~1h30)</li>
-              <li>Taxi or shuttle from the station (~10 min)</li>
-            </ul>
-            <p>
-              <a href="https://www.sncf-connect.com/" target="_blank" rel="noopener noreferrer">Book on SNCF Connect</a>
-              &middot;
-              <a href="https://www.trainline.fr/" target="_blank" rel="noopener noreferrer">Trainline</a>
-            </p>
-          </article>
-          <article class="card">
-            <h3>From Strasbourg</h3>
-            <p class="card-subtitle">~3h by car / ~2h30 by train</p>
-            <h4>By car</h4>
-            <ul>
-              <li>Take the A4 motorway west towards Paris</li>
-              <li>Exit at Châlons-en-Champagne</li>
-              <li>Follow signs to Mairy-sur-Marne</li>
-            </ul>
-            <h4>By train</h4>
-            <ul>
-              <li>Strasbourg to Châlons-en-Champagne (~2h30, connection in Reims)</li>
-              <li>Taxi or shuttle from the station (~10 min)</li>
-            </ul>
-            <p>
-              <a href="https://www.sncf-connect.com/" target="_blank" rel="noopener noreferrer">Book on SNCF Connect</a>
-              &middot;
-              <a href="https://www.trainline.fr/" target="_blank" rel="noopener noreferrer">Trainline</a>
-            </p>
-          </article>
-          <article class="card">
-            <h3>On site</h3>
-            <p class="card-subtitle">Parking & grounds</p>
-            <ul>
-              <li>Free parking available at the château</li>
-              <li>The domain spans 10 hectares of gardens and woodland</li>
-              <li>Flat shoes recommended for the garden paths</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Book your tickets early</h3>
-            <p class="card-subtitle">Useful links</p>
-            <ul>
-              <li><a href="https://www.sncf-connect.com/" target="_blank" rel="noopener noreferrer">SNCF Connect</a> &mdash; official French rail booking</li>
-              <li><a href="https://www.trainline.fr/" target="_blank" rel="noopener noreferrer">Trainline</a> &mdash; compare prices across operators</li>
-              <li><a href="https://www.blablacar.fr/" target="_blank" rel="noopener noreferrer">BlaBlaCar</a> &mdash; carpooling option</li>
-            </ul>
-          </article>
-        </div>
-        <div class="map-wrap">
-          <iframe
-            title="Wedding venue map"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=Château+de+Mairy+Mairy-sur-Marne&output=embed"
-          ></iframe>
-        </div>
-      </section>
-
-      <section id="stay" class="section section-alt">
+      <!-- ============ SCHEDULE ============ -->
+      <section id="schedule" class="section">
         <div class="container">
-          <h2>Where to stay</h2>
-          <p>
-            The château is located near Châlons-en-Champagne, with Reims also
-            within easy reach. Here are our recommendations:
+          <h2>Wedding schedule</h2>
+          <p class="section-intro">
+            While our symbolic ceremony is on 1st May, our wedding celebrations
+            will span four days. The additional days are optional to attend.
+            Please read the schedule and let us know in the
+            <a href="#rsvp">RSVP</a> which events you would like to attend.
           </p>
-          <div class="grid two-col">
-            <article class="card">
-              <h3>Châlons-en-Champagne</h3>
-              <p class="card-subtitle">~10 min from the venue</p>
-              <ul>
-                <li>The closest town with a wide range of hotels</li>
-                <li>TGV train station for easy arrival/departure</li>
-                <li>Several restaurants and bars in the town centre</li>
-              </ul>
-            </article>
-            <article class="card">
-              <h3>Reims</h3>
-              <p class="card-subtitle">~45 min from the venue</p>
-              <ul>
-                <li>Larger city with more hotel options</li>
-                <li>Worth a visit for its cathedral and Champagne houses</li>
-                <li>Connected by TGV to Paris in 45 min</li>
-              </ul>
-            </article>
-          </div>
-          <p class="stay-note">
-            More specific hotel recommendations will follow. If you need help
-            booking, don't hesitate to <a href="#contact">reach out</a>!
-          </p>
-        </div>
-      </section>
-
-      <section id="timeline" class="section">
-        <div class="container">
-          <h2>Timeline of events</h2>
           <ol class="timeline">
             <li>
-              <span class="time">14:30</span>
+              <span class="time">Thu<br />29 Apr</span>
               <div>
-                <h3>Guest arrival</h3>
-                <p>Welcome drinks in the château gardens.</p>
+                <span class="tag">Optional</span>
+                <h3>The Groom's walking tour of Strasbourg</h3>
+                <p>
+                  Joseph will host a walking tour through his hometown,
+                  Strasbourg, showing you key places in the heart of the city
+                  like the Gothic <em>Notre-Dame</em>, La Petite France, and the
+                  half-timbered apartment he grew up in. More details in
+                  <a href="#things-to-do">Things to do</a>.
+                </p>
               </div>
             </li>
             <li>
-              <span class="time">16:00</span>
+              <span class="time">Fri<br />30 Apr</span>
               <div>
-                <h3>Ceremony</h3>
-                <p>Exchange of vows in the château gardens.</p>
+                <span class="tag">Optional</span>
+                <h3>Civil ceremony at the Mairie de Strasbourg</h3>
+                <p>Followed by a vin d'honneur.</p>
+                <p class="muted">Details to follow in November.</p>
+              </div>
+            </li>
+            <li class="highlight">
+              <span class="time">Sat<br />1 May</span>
+              <div>
+                <span class="tag tag-strong">All guests</span>
+                <h3>The symbolic ceremony</h3>
+                <p>
+                  <strong>Domaine du Château de Mairy</strong><br />
+                  51240 Mairy-sur-Marne, France
+                </p>
+                <p>
+                  <a href="https://maps.app.goo.gl/szDpLosm24EJpWba6" target="_blank" rel="noopener noreferrer">Open in Google Maps &rarr;</a>
+                </p>
               </div>
             </li>
             <li>
-              <span class="time">17:30</span>
+              <span class="time">Sun<br />2 May</span>
               <div>
-                <h3>Aperitivo</h3>
-                <p>Cocktails and canapés on the terrace.</p>
-              </div>
-            </li>
-            <li>
-              <span class="time">19:00</span>
-              <div>
-                <h3>Dinner</h3>
-                <p>Seated dinner and speeches.</p>
-              </div>
-            </li>
-            <li>
-              <span class="time">21:30</span>
-              <div>
-                <h3>Party</h3>
-                <p>Music, dancing, and late-night bites.</p>
+                <span class="tag">Optional</span>
+                <h3>Post-wedding lunch &amp; Champagne cellar tour</h3>
+                <p>In Châlons-en-Champagne.</p>
+                <p class="muted">Details to follow.</p>
               </div>
             </li>
           </ol>
         </div>
       </section>
 
-      <section id="contact" class="section container">
-        <h2>Contact</h2>
-        <p>
-          Questions about travel, accommodation, or dietary preferences? Reach us
-          anytime:
-        </p>
-        <div class="grid two-col">
-          <article class="card">
-            <h3>Joseph</h3>
-            <p>Email: <a href="mailto:joseph@example.com">joseph@example.com</a></p>
-            <p>Phone: <a href="tel:+390000000000">+39 000 000 0000</a></p>
-          </article>
-          <article class="card">
-            <h3>Beatrice</h3>
-            <p>Email: <a href="mailto:beatrice@example.com">beatrice@example.com</a></p>
-            <p>Phone: <a href="tel:+390000000001">+39 000 000 0001</a></p>
-          </article>
+      <!-- ============ VENUE ============ -->
+      <section id="venue" class="section section-alt">
+        <div class="container">
+          <h2>Venue</h2>
+          <div class="venue">
+            <div>
+              <p class="venue-address">
+                <strong>Domaine du Château de Mairy</strong><br />
+                51240 Mairy-sur-Marne<br />
+                France
+              </p>
+              <a class="btn" href="https://maps.app.goo.gl/szDpLosm24EJpWba6" target="_blank" rel="noopener noreferrer">Get directions</a>
+            </div>
+            <div class="map-wrap">
+              <iframe
+                title="Wedding venue map"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Château+de+Mairy+Mairy-sur-Marne&output=embed"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FAQ ============ -->
+      <section id="faq" class="section">
+        <div class="container narrow">
+          <h2>Further details</h2>
+
+          <details class="faq">
+            <summary>When should I arrive?</summary>
+            <div class="faq-body">
+              <h4>Friday</h4>
+              <p>
+                We ask that those in the wedding party please arrive at the
+                venue by <strong>17:00</strong> for the rehearsal, and those
+                otherwise staying at Château de Mairy please arrive at the venue
+                from <strong>19:00</strong>.
+              </p>
+              <h4>Saturday</h4>
+              <p>
+                <span class="tag">TBC</span> Please arrive at Château de Mairy by
+                <strong>13:30</strong> for a <strong>14:00</strong> start. For
+                those arriving by car, please park outside the Château gates.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq">
+            <summary>Where can I stay?</summary>
+            <div class="faq-body">
+              <p>Did you receive a croissant with your invitation?</p>
+              <div class="stay-toggle" role="tablist">
+                <button class="stay-btn active" role="tab" aria-selected="true" data-stay="chateau">
+                  <span class="stay-icon" aria-hidden="true">🥐</span>
+                  I received a croissant
+                </button>
+                <button class="stay-btn" role="tab" aria-selected="false" data-stay="other">
+                  <span class="stay-icon" aria-hidden="true">🏡</span>
+                  Other guests
+                </button>
+              </div>
+
+              <div class="stay-panel" data-stay-panel="chateau">
+                <h4>Domaine du Château de Mairy</h4>
+                <p>
+                  Accommodation at the Château is provided for two nights to
+                  those who have received a croissant alongside their wedding
+                  invitation.
+                </p>
+                <ul class="facts">
+                  <li><span>Check in</span> Friday 30th April from 19:00 (unless otherwise stated)</li>
+                  <li><span>Check out</span> 12:00 on Sunday 2nd May</li>
+                </ul>
+                <p>
+                  If you are not planning to attend the wedding or have made
+                  other accommodation arrangements, please let us know as soon
+                  as possible so your room can be offered to someone else.
+                </p>
+              </div>
+
+              <div class="stay-panel" data-stay-panel="other" hidden>
+                <div class="grid two-col">
+                  <article class="card">
+                    <h3>Mairy-sur-Marne</h3>
+                    <p class="card-subtitle">Walking distance</p>
+                    <p>Limited accommodation is available in the village, just a short walk from the wedding venue.</p>
+                  </article>
+                  <article class="card">
+                    <h3>Châlons-en-Champagne</h3>
+                    <p class="card-subtitle">20 min drive &middot; recommended</p>
+                    <p>
+                      Only 20 minutes' drive from the venue, the city of
+                      Châlons-en-Champagne has ample accommodation. This is
+                      also where we will host Sunday's events and where the
+                      shuttles depart.
+                    </p>
+                  </article>
+                  <article class="card">
+                    <h3>Pogny</h3>
+                    <p class="card-subtitle">10 min drive &middot; sleeps 12</p>
+                    <p>
+                      Only a 10 minute drive from the venue, this house in Pogny
+                      has room for 12, including a family room and a spa.
+                    </p>
+                    <p><a href="https://www.gites-de-france-marne.com/location-vacances-Gite-Pogny-51G760.html" target="_blank" rel="noopener noreferrer">View on Gîtes de France &rarr;</a></p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="faq">
+            <summary>How can I get to Château de Mairy?</summary>
+            <div class="faq-body">
+              <p>
+                There are many options to get to our wedding venue. We will be
+                providing shuttles to and from the venue from
+                <strong>Châlons-en-Champagne train station</strong>, and there
+                are also a number of taxi services.
+              </p>
+              <h4>Friday shuttle</h4>
+              <p>From Châlons-en-Champagne station on Friday evening, for those staying in Mairy-sur-Marne or at the Château.</p>
+              <h4>Saturday shuttle</h4>
+              <p>From Châlons-en-Champagne station to the venue, departing at <strong>12:15</strong> and <strong>13:00</strong>.</p>
+              <p class="callout">
+                If you would like to be picked up by the shuttle on either day,
+                please let us know by <strong>1st April</strong> with your
+                approximate pick-up time and destination.
+              </p>
+              <p>
+                If you get stuck, or arrive at Reims or Champagne-Ardenne after
+                20:00 on Friday, we may be able to pick you up directly from the
+                station. Please WhatsApp or call Joaquin on
+                <a href="tel:+64272669727">+64 27 266 9727</a>.
+              </p>
+              <h4>Taxis</h4>
+              <p>
+                Uber and Bolt are available but may be scarce, so we recommend
+                calling a taxi company directly:
+              </p>
+              <ul class="taxi-list">
+                <li><strong>Taxi Caroline</strong><span>40 All. Voltaire, Châlons-en-Champagne</span><a href="tel:+33683187304">06 83 18 73 04</a></li>
+                <li><strong>SOS Taxi</strong><span>1 Av. de la Gare, Châlons-en-Champagne</span><a href="tel:+33695924650">06 95 92 46 50</a></li>
+                <li><strong>Thierry Loiacono</strong><span>26 Rue André Malraux, Châlons-en-Champagne</span><a href="tel:+33611036280">06 11 03 62 80</a></li>
+                <li><strong>Taxis Sainte-Croix</strong><span>127/129 Avenue de Paris, Châlons-en-Champagne</span><a href="tel:+33326659595">03 26 65 95 95</a></li>
+              </ul>
+              <p>For more on flights, trains and car hire (including Strasbourg), see <a href="#travel">Travel</a>.</p>
+            </div>
+          </details>
+
+          <details class="faq">
+            <summary>Can I take pictures or videos?</summary>
+            <div class="faq-body">
+              <p>
+                We have invested in a wonderful photographer to capture every
+                special moment of our day, and we can't wait to share those
+                memories with you all!
+              </p>
+              <p>
+                You are more than welcome to use your phones and snap your own
+                memories during the celebrations. However, during the symbolic
+                ceremony we ask that phones and cameras are put away, so that
+                our photographer can fully focus on capturing those
+                once-in-a-lifetime moments, and so that you can be fully present
+                in them too.
+              </p>
+              <p>
+                When using your own camera, we kindly ask that you are mindful
+                not to step in front of our photographer. As much as we love
+                that you want to capture the day, it can mean our photographer
+                misses magical moments that can never be recreated.
+              </p>
+              <p class="muted">
+                Reception with some phone providers may be limited at the
+                Château. Wi-Fi is available.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq">
+            <summary>Can I bring my children?</summary>
+            <div class="faq-body">
+              <p>
+                While we love your little ones, our civil and symbolic wedding
+                ceremonies will be adults-only celebrations, with the exception
+                of a small number of children who are close family. If your
+                invitation includes your children, they will be named on your
+                RSVP. We appreciate your understanding and hope this gives you
+                the chance to enjoy the day, and perhaps a well-deserved evening
+                off!
+              </p>
+            </div>
+          </details>
+
+          <details class="faq">
+            <summary>What about gifts?</summary>
+            <div class="faq-body">
+              <p>
+                Having you there to celebrate with us is more than enough,
+                especially with so many of you travelling to be with us. That
+                said, if you'd still like to mark the occasion, we're setting up
+                a wishing well towards our new life in New Zealand rather than
+                asking for gifts.
+              </p>
+              <p class="muted">Wishing well link coming soon.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- ============ THINGS TO DO ============ -->
+      <section id="things-to-do" class="section section-alt">
+        <div class="container">
+          <h2>Things to do</h2>
+          <p class="section-intro">
+            As many of our guests will be travelling from as far as 19,000 km
+            away, we understand you may want to extend your trip beyond the
+            wedding. Alongside the events we're hosting, here is a curated list
+            of other things you may enjoy during your visit.
+          </p>
+
+          <div class="tabs" role="tablist">
+            <button class="tab active" role="tab" aria-selected="true" data-tab="strasbourg">Strasbourg</button>
+            <button class="tab" role="tab" aria-selected="false" data-tab="alsace">Alsace &amp; day trips</button>
+            <button class="tab" role="tab" aria-selected="false" data-tab="champagne">Champagne</button>
+          </div>
+
+          <div class="tab-panel" data-tab-panel="strasbourg">
+            <p class="region-intro">
+              Nestled on the border of France and Germany with the Rhine running
+              through it, Strasbourg has a rich, blended heritage, from the
+              charming half-timbered houses lining the canals of the Grande
+              Île, to menus filled with Alsatian classics like
+              <em>tarte flambée</em> and local Riesling and natural wines.
+              Strasbourg is also known as the &lsquo;Capital of Christmas&rsquo;
+              and is home to the Christkindelsmärik, one of Europe's oldest and
+              largest Christmas markets.
+            </p>
+            <div class="gallery" aria-label="Photos of Strasbourg">
+              <img src="static/images/things-to-do/strasbourg-capitale-de-noel.jpg" alt="Beatrice and Joseph under the Strasbourg Capitale de Noël lights" loading="lazy" />
+              <img src="static/images/things-to-do/strasbourg-petite-france.jpg" alt="Half-timbered houses in La Petite France" loading="lazy" />
+              <img src="static/images/things-to-do/strasbourg-christmas-market.jpg" alt="The Christmas market on Place Kléber" loading="lazy" />
+              <img src="static/images/things-to-do/strasbourg-half-timbered-house.jpg" alt="A yellow half-timbered house in Strasbourg" loading="lazy" />
+              <img src="static/images/things-to-do/strasbourg-ponts-couverts.jpg" alt="A Batorama boat passing the Ponts Couverts" loading="lazy" />
+              <img src="static/images/things-to-do/strasbourg-saint-paul-boat.jpg" alt="Saint-Paul church seen from the river" loading="lazy" />
+              <img src="static/images/things-to-do/strasbourg-river.jpg" alt="Houseboats along the river at dusk" loading="lazy" />
+            </div>
+            <div class="grid two-col">
+              <article class="card">
+                <img class="card-img" src="static/images/things-to-do/petit-train-cathedral.jpg" alt="Le Petit Train outside the Cathedral" loading="lazy" />
+                <p class="card-kicker">By train</p>
+                <h3>Le Petit Train de Strasbourg</h3>
+                <p>Departs from two spots outside the Cathédrale Notre-Dame. Runs 35&ndash;45 minutes with commentary in many languages including French, English and Italian.</p>
+                <p class="price">€9 adults &middot; €7 children &middot; under 5s free</p>
+                <a href="https://petit-train-strasbourg.fr/" target="_blank" rel="noopener noreferrer">petit-train-strasbourg.fr &rarr;</a>
+              </article>
+              <article class="card">
+                <img class="card-img" src="static/images/things-to-do/strasbourg-cathedral-view.jpg" alt="View over Strasbourg from the Cathedral platform" loading="lazy" />
+                <p class="card-kicker">By foot</p>
+                <h3>Climb the Cathedral</h3>
+                <p>Climb the Cathedral's 330 steps to the platform and guard house. No pre-booking required, just rock up.</p>
+                <p class="price">€10 adults &middot; €6 children</p>
+              </article>
+              <article class="card">
+                <img class="card-img" src="static/images/things-to-do/batorama-boat.jpg" alt="A Batorama sightseeing boat" loading="lazy" />
+                <p class="card-kicker">By boat</p>
+                <h3>Batorama sightseeing cruise</h3>
+                <p>Explore Strasbourg, including the European Parliament, on routes lasting 45 minutes to 2 hours. You may wish to hop off at the Parliament for a visit, and return later by boat for only €4.50.</p>
+                <p class="price">€12.50&ndash;€19.30 adults &middot; €0.50 under 4s</p>
+                <a href="https://www.batorama.com/en/circuits" target="_blank" rel="noopener noreferrer">batorama.com &rarr;</a>
+              </article>
+              <article class="card">
+                <img class="card-img" src="static/images/things-to-do/parliament-exterior.jpg" alt="The European Parliament building in Strasbourg" loading="lazy" />
+                <p class="card-kicker">See democracy in action</p>
+                <h3>Visit the European Parliament</h3>
+                <p>Visits are free, but reservations are essential and you must bring ID (passports are accepted, NZ driver's licences are not). Based on 2026 dates, the Parliament may well be in session during your visit, and visitors can sit in the gallery during plenary sessions (30 minutes). Multimedia and guided visits are available outside plenary sessions, in French and English.</p>
+                <a href="https://visiting.europarl.europa.eu/en/visitor-offer/strasbourg/hemicycle" target="_blank" rel="noopener noreferrer">Book a visit &rarr;</a>
+              </article>
+              <article class="card">
+                <p class="card-kicker">With kids</p>
+                <h3>Free pushchair loan</h3>
+                <p>The Strasbourg Tourist Office can lend you a folding pushchair for the day, free of charge (subject to availability; €50 deposit).</p>
+              </article>
+              <article class="card">
+                <p class="card-kicker">Where to stay</p>
+                <h3>Staying in Strasbourg</h3>
+                <p>Without a car, we recommend staying in the city centre, near the train station, or near the Place des Halles shopping centre. All are within walking distance of the city centre, where the Strasbourg wedding and pre-wedding events will take place.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-tab-panel="alsace" hidden>
+            <div class="grid two-col">
+              <article class="card">
+                <img class="card-img" src="static/images/things-to-do/colmar.jpg" alt="Beatrice on a bridge over the canal in Colmar" loading="lazy" />
+                <p class="card-kicker">Day trip</p>
+                <h3>Colmar</h3>
+                <p>A beautiful little town lined with half-timbered houses, said to be an inspiration for <em>Beauty and the Beast</em>.</p>
+              </article>
+              <article class="card">
+                <p class="card-kicker">Day trip</p>
+                <h3>The Alsace Wine Route</h3>
+                <p>Explore the little villages along the Alsace Wine Route.</p>
+                <a href="https://www.wineroute.alsace/heritage-and-culture/typical-villages-of-the-alsace-wine-route/" target="_blank" rel="noopener noreferrer">Typical villages &rarr;</a>
+              </article>
+              <article class="card">
+                <img class="card-img" src="static/images/things-to-do/europa-park.jpg" alt="Europa-Park in winter" loading="lazy" />
+                <p class="card-kicker">With kids</p>
+                <h3>Europa-Park</h3>
+                <p>Europe's largest theme park, in Germany, just 30 minutes from Strasbourg city centre.</p>
+                <p class="price">Under 4s free &middot; from €67 adults &middot; from €56.50 children 4&ndash;11</p>
+                <a href="https://www.europapark.de/en" target="_blank" rel="noopener noreferrer">europapark.de &rarr;</a>
+              </article>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-tab-panel="champagne" hidden>
+            <div class="grid two-col">
+              <article class="card">
+                <p class="card-kicker">Local life</p>
+                <h3>Marché de Châlons-en-Champagne</h3>
+                <p>Experience a true French market, with a cheesemonger, fishmonger, delicatessen, rotisserie, fruit and vegetables, spices, flowers and caterers. Look out for Champagne's other specialities: the pink <em>biscuits roses de Reims</em> and <em>lentillons champenois</em> lentils.</p>
+                <p class="price">Wed &amp; Sat 7:00&ndash;13:00 &middot; Sun 7:00&ndash;12:30</p>
+                <a href="https://www.chalons-tourisme.com/decouvrir/les-saveurs-dici/flaner-sur-le-marche-de-chalons-en-champagne/" target="_blank" rel="noopener noreferrer">More info &rarr;</a>
+              </article>
+              <article class="card">
+                <p class="card-kicker">On the water</p>
+                <h3>Boat tour of Châlons-en-Champagne</h3>
+                <p>Discover the city from an unusual angle along the Mau and Nau canals. Tours in French and English; booking required.</p>
+                <p class="price">€13 adults &middot; €6.50 children</p>
+                <a href="https://en.chalons-tourisme.com/book-online/all-the-products/?re-product-id=161092" target="_blank" rel="noopener noreferrer">Book online &rarr;</a>
+              </article>
+              <article class="card">
+                <p class="card-kicker">Something special</p>
+                <h3>Champagne by hot-air balloon</h3>
+                <p>See Champagne and its heritage from above, with a planned take-off from Taissy near Reims. The experience lasts 3 to 3&frac12; hours.</p>
+                <p class="price">From €249</p>
+                <a href="https://www.franceballoons.com/en/to-book/champagne-by-balloon/" target="_blank" rel="noopener noreferrer">franceballoons.com &rarr;</a>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ TRAVEL ============ -->
+      <section id="travel" class="section">
+        <div class="container">
+          <h2>Travel</h2>
+
+          <div class="grid two-col">
+            <article class="card">
+              <h3>Flights</h3>
+              <p>
+                From New Zealand, you may wish to fly into
+                <strong>Frankfurt (FRA)</strong> or
+                <strong>Paris-Charles de Gaulle (CDG)</strong>. Both need a
+                train journey of around two hours to reach Strasbourg.
+              </p>
+              <p>
+                From London, Strasbourg's small airport
+                <strong>(SXB)</strong>, 10 km from the city centre, has just
+                two flights a week from London. Conveniently, one of them is on
+                Thursday 29th April, the day before our civil ceremony.
+              </p>
+              <p class="muted">
+                EuroAirport Basel-Mulhouse-Freiburg (BSL/MLH) and Munich (MUC)
+                are alternatives with slightly longer onward journeys.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Driving &amp; car hire</h3>
+              <p>
+                Driving in Strasbourg is a little more intense than in New
+                Zealand (people love their horns, particularly the buses), but
+                much less chaotic than London or parts of Italy.
+              </p>
+              <p>
+                The city is very walkable, so a car isn't necessary in
+                Strasbourg, and Champagne is reachable by train.
+              </p>
+              <ul>
+                <li><strong>Strasbourg:</strong> most car hire is by the main train station. We've used SIXT, who were <em>fantastique</em> and spoke fluent English.</li>
+                <li><strong>Champagne:</strong> most rentals are in Reims. We've used Europcar, a short walk from Reims station. SIXT also has a desk at Champagne-Ardenne TGV station, handy if arriving by train from Strasbourg.</li>
+              </ul>
+            </article>
+          </div>
+
+          <h3 class="subhead">Trains to Champagne</h3>
+          <p>
+            High-speed trains from Paris and Strasbourg can get you to Champagne
+            in as little as two hours, at up to 320 km/h. Please make your way
+            to <strong>Châlons-en-Champagne</strong>, where the shuttles depart
+            and where we recommend you stay for the weekend. Book ahead on
+            <a href="https://www.thetrainline.com/" target="_blank" rel="noopener noreferrer">Trainline</a>,
+            <a href="https://www.omio.com/" target="_blank" rel="noopener noreferrer">Omio</a>
+            or directly with
+            <a href="https://www.sncf-connect.com/" target="_blank" rel="noopener noreferrer">SNCF Connect</a>.
+          </p>
+
+          <div class="grid two-col">
+            <article class="card">
+              <h3>From Paris</h3>
+              <p class="card-subtitle">1h12 &ndash; 1h37 direct</p>
+              <ul>
+                <li><strong>TER</strong> or <strong>TGV inOui</strong> from <em>Paris Gare de l'Est</em> direct to <em>Châlons-en-Champagne</em>.</li>
+                <li>Or <strong>TGV inOui</strong> to <em>Reims</em> (46 min), then <strong>TER</strong> to <em>Châlons-en-Champagne</em> (~40 min).</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>From Strasbourg</h3>
+              <p class="card-subtitle">~2h30 with changes &middot; 3h11 direct</p>
+              <ul>
+                <li><strong>TGV inOui</strong> to <em>Champagne-Ardenne TGV</em> (1h08 &ndash; 1h22), <strong>TER</strong> to <em>Reims</em> (12 min), then <strong>TER</strong> to <em>Châlons-en-Champagne</em>.</li>
+                <li>One direct TGV from <em>Champagne-Ardenne TGV</em> to <em>Châlons</em> at 20:11.</li>
+                <li>One direct TER from <em>Strasbourg</em> at 16:19, arriving 19:30. Only take this if you're not attending the rehearsal.</li>
+              </ul>
+            </article>
+          </div>
+
+          <details class="faq faq-boxed">
+            <summary>Detailed timetable (for those who want it)</summary>
+            <div class="faq-body">
+              <p class="muted">
+                It's a little early to know the exact 2027 timetable. These are
+                based on current services and are subject to change. Please
+                don't hesitate to ask us if you need help planning your route.
+              </p>
+              <div class="table-wrap">
+                <table class="train-table">
+                  <thead>
+                    <tr>
+                      <th>Route</th>
+                      <th>Train</th>
+                      <th>Duration</th>
+                      <th>Frequency</th>
+                      <th>Likely departures</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="group"><td colspan="5">From Strasbourg</td></tr>
+                    <tr>
+                      <td>Strasbourg &rarr; Champagne-Ardenne TGV</td>
+                      <td>TGV inOui</td>
+                      <td>1h08 &ndash; 1h32</td>
+                      <td>6 per day (05:59 &ndash; 18:23)</td>
+                      <td><strong>14:01 &rarr; 15:23</strong> (47 min wait for TER)<br /><strong>17:01 &rarr; 18:33</strong> (7 min wait)<br /><strong>18:23 &rarr; 19:31</strong> (8 min wait)</td>
+                    </tr>
+                    <tr>
+                      <td>Champagne-Ardenne TGV &rarr; Reims Ville</td>
+                      <td>TER</td>
+                      <td>12 min</td>
+                      <td>About every 30 min until 20:16</td>
+                      <td>07:10 &ndash; 21:10</td>
+                    </tr>
+                    <tr>
+                      <td>Champagne-Ardenne TGV &rarr; Châlons-en-Champagne</td>
+                      <td>TGV inOui</td>
+                      <td>20 min</td>
+                      <td>1 per day</td>
+                      <td><strong>20:11</strong></td>
+                    </tr>
+                    <tr>
+                      <td>Reims Ville &rarr; Châlons-en-Champagne</td>
+                      <td>TER</td>
+                      <td>35 &ndash; 43 min</td>
+                      <td>06:20 &ndash; 20:35</td>
+                      <td><strong>16:35 &rarr; 17:09</strong>, 17:05 &rarr; 17:39, 17:35 &rarr; 18:18, 18:05 &rarr; 18:39, <strong>18:35 &rarr; 19:18</strong>, <strong>19:35 &rarr; 20:18</strong>, 20:35 &rarr; 21:10</td>
+                    </tr>
+                    <tr>
+                      <td>Strasbourg &rarr; Châlons-en-Champagne (direct)</td>
+                      <td>TER</td>
+                      <td>3h11</td>
+                      <td>1 afternoon service on Friday</td>
+                      <td><strong>16:19 &rarr; 19:30</strong></td>
+                    </tr>
+                    <tr class="group"><td colspan="5">From Paris</td></tr>
+                    <tr>
+                      <td>Paris Gare de l'Est &rarr; Châlons-en-Champagne</td>
+                      <td>TER or TGV inOui</td>
+                      <td>1h12 &ndash; 1h37</td>
+                      <td>Hourly (gap 12:36 &ndash; 16:36 on Friday)</td>
+                      <td><em>Fri:</em> 16:36 &rarr; 18:05, 17:36 &rarr; 19:13, 18:36 &rarr; 20:13, 19:22 &rarr; 20:34, 19:36 &rarr; 21:13, 21:36 &rarr; 23:13<br /><em>Sat:</em> 08:36 &rarr; 10:15, 09:36 &rarr; 11:13, 10:36 &rarr; 12:13, 11:36 &rarr; 13:13</td>
+                    </tr>
+                    <tr>
+                      <td>Paris Gare de l'Est &rarr; Reims Ville</td>
+                      <td>TGV inOui</td>
+                      <td>46 min</td>
+                      <td>10 per day (07:39 &ndash; 21:04)</td>
+                      <td><em>Fri:</em> 12:50 &rarr; 13:44, 15:42 &rarr; 16:28, 17:28 &rarr; 18:14, 18:28 &rarr; 19:14, 20:28 &rarr; 21:14, 21:04 &rarr; 21:50<br /><em>Sat:</em> 08:28 &rarr; 09:13, 10:28 &rarr; 11:14, 13:28 &rarr; 14:14</td>
+                    </tr>
+                    <tr>
+                      <td>Paris Gare de l'Est &rarr; Champagne-Ardenne TGV</td>
+                      <td>TGV inOui</td>
+                      <td>40 min</td>
+                      <td>8 per day, only 3 in the afternoon/evening</td>
+                      <td>13:58 &rarr; 14:38, 16:07 &rarr; 16:46, 19:22 &rarr; 20:02</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </details>
+
+          <p class="callout">
+            Trains in France do occasionally get cancelled unexpectedly, so
+            please try not to take the last train of the day.
+          </p>
+
+          <div class="grid two-col">
+            <article class="card">
+              <h3>Shuttle</h3>
+              <ul>
+                <li><strong>Friday evening:</strong> from Châlons-en-Champagne station for those staying in Mairy-sur-Marne or at the Château.</li>
+                <li><strong>Saturday:</strong> from Châlons-en-Champagne station to the venue at <strong>12:15</strong> and <strong>13:00</strong>.</li>
+              </ul>
+              <p>Please let us know by <strong>1st April</strong> if you'd like a pick-up, with your approximate time and destination.</p>
+              <p class="muted">Stuck, or arriving at Reims or Champagne-Ardenne after 20:00 on Friday? WhatsApp or call Joaquin on <a href="tel:+64272669727">+64 27 266 9727</a>.</p>
+            </article>
+            <article class="card">
+              <h3>Taxis</h3>
+              <p>Uber and Bolt are available but may be scarce, so we recommend calling a local taxi company directly:</p>
+              <ul class="taxi-list">
+                <li><strong>Taxi Caroline</strong><span>40 All. Voltaire, Châlons-en-Champagne</span><a href="tel:+33683187304">06 83 18 73 04</a></li>
+                <li><strong>SOS Taxi</strong><span>1 Av. de la Gare, Châlons-en-Champagne</span><a href="tel:+33695924650">06 95 92 46 50</a></li>
+                <li><strong>Thierry Loiacono</strong><span>26 Rue André Malraux, Châlons-en-Champagne</span><a href="tel:+33611036280">06 11 03 62 80</a></li>
+                <li><strong>Taxis Sainte-Croix</strong><span>127/129 Avenue de Paris, Châlons-en-Champagne</span><a href="tel:+33326659595">03 26 65 95 95</a></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ RSVP ============ -->
+      <section id="rsvp" class="section section-alt">
+        <div class="container narrow center">
+          <h2>RSVP</h2>
+          <p>
+            Please let us know which celebrations you'll be joining us for.
+            We'll ask about:
+          </p>
+          <ul class="rsvp-list">
+            <li>The Groom's walking tour of Strasbourg <span>Thu 29 Apr</span></li>
+            <li>Civil ceremony, Mairie de Strasbourg <span>Fri 30 Apr</span></li>
+            <li>Symbolic ceremony, Château de Mairy <span>Sat 1 May</span></li>
+            <li>Post-wedding lunch &amp; cellar tour <span>Sun 2 May</span></li>
+            <li>Any dietary requirements</li>
+          </ul>
+          <a
+            class="btn"
+            href="https://forms.gle/REPLACE_WITH_YOUR_FORM_ID"
+            target="_blank"
+            rel="noopener noreferrer"
+            >RSVP now</a
+          >
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container">
-        <p>With love, Beatrice & Joseph</p>
+        <p>With love, Beatrice &amp; Joseph</p>
       </div>
     </footer>
 
-    <script src="static/js/script.js"></script>
+    <script src="static/js/script.js?v=7"></script>
   </body>
 </html>
