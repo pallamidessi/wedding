@@ -68,3 +68,49 @@ if (photoPile) {
     });
   });
 }
+
+// Venue photo wall: click a tile to view it full screen
+const venueWall = document.getElementById("venueWall");
+const lightbox = document.getElementById("lightbox");
+if (venueWall && lightbox && typeof lightbox.showModal === "function") {
+  const tiles = [...venueWall.querySelectorAll(".wall-tile")];
+  const lbImg = lightbox.querySelector("img");
+  const lbCaption = lightbox.querySelector("figcaption");
+  let current = 0;
+
+  const show = (index) => {
+    current = (index + tiles.length) % tiles.length;
+    const img = tiles[current].querySelector("img");
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    lbCaption.innerHTML = tiles[current].querySelector("figcaption").innerHTML;
+  };
+
+  tiles.forEach((tile, i) => {
+    tile.tabIndex = 0;
+    tile.setAttribute("role", "button");
+    const open = () => {
+      show(i);
+      lightbox.showModal();
+    };
+    tile.addEventListener("click", open);
+    tile.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        open();
+      }
+    });
+  });
+
+  lightbox.querySelector(".lightbox-prev").addEventListener("click", () => show(current - 1));
+  lightbox.querySelector(".lightbox-next").addEventListener("click", () => show(current + 1));
+  lightbox.querySelector(".lightbox-close").addEventListener("click", () => lightbox.close());
+  // clicking the dark background (not the photo or buttons) closes it
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) lightbox.close();
+  });
+  lightbox.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") show(current - 1);
+    if (event.key === "ArrowRight") show(current + 1);
+  });
+}

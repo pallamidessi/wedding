@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="static/css/styles.css?v=18" />
+    <link rel="stylesheet" href="static/css/styles.css?v=22" />
   </head>
   <body>
     <header class="site-header">
@@ -196,15 +196,46 @@
       <section id="venue" class="section section-alt">
         <div class="container">
           <h2>Venue</h2>
+          <p class="section-intro">
+            A 17th-century château set within 10 hectares of gardens and
+            woodland in the heart of Champagne. This is where we'll say our
+            vows, dine and dance, and where many of you will stay.
+          </p>
+          <div class="venue-wall" id="venueWall">
+            <figure class="wall-tile wall-aerial">
+              <img src="static/images/venue/aerial.jpg?v=2" alt="Château de Mairy from above, surrounded by woodland" loading="lazy" />
+              <figcaption>The château &amp; its grounds</figcaption>
+            </figure>
+            <figure class="wall-tile wall-garden-dinner">
+              <img src="static/images/venue/garden-dinner.jpg" alt="A long candlelit table laid under the trees" loading="lazy" />
+              <figcaption>Dinner under the trees</figcaption>
+            </figure>
+            <figure class="wall-tile wall-tower">
+              <img src="static/images/venue/tower.jpg" alt="The old stone tower among the trees" loading="lazy" />
+              <figcaption>The tower</figcaption>
+            </figure>
+            <figure class="wall-tile wall-salon">
+              <img src="static/images/venue/salon.jpg" alt="The salon with its crystal chandelier" loading="lazy" />
+              <figcaption>The salon</figcaption>
+            </figure>
+            <figure class="wall-tile wall-bedroom">
+              <img src="static/images/venue/bedroom.jpg" alt="A panelled bedroom with a vanity and fresh flowers" loading="lazy" />
+              <figcaption>The bedrooms</figcaption>
+            </figure>
+            <figure class="wall-tile wall-dining-room">
+              <img src="static/images/venue/dining-room.jpg" alt="The dining room set for a candlelit dinner" loading="lazy" />
+              <figcaption>The dining room</figcaption>
+            </figure>
+          </div>
           <div class="venue">
-            <div>
+            <div class="venue-info">
+              <p class="card-kicker">Where</p>
               <p class="venue-address">
                 <strong>Domaine du Château de Mairy</strong><br />
                 51240 Mairy-sur-Marne<br />
                 France
               </p>
               <a class="btn" href="https://maps.app.goo.gl/szDpLosm24EJpWba6" target="_blank" rel="noopener noreferrer">Get directions</a>
-              <img class="venue-photo" src="static/images/chateau-hero.jpg" alt="Château de Mairy and its gardens" loading="lazy" />
             </div>
             <div class="map-wrap">
               <iframe
@@ -730,7 +761,7 @@
       <!-- ============ RSVP ============ -->
       <section id="rsvp" class="section section-alt">
         <div class="container narrow center">
-          <h2>RSVP</h2>
+          <h2>RSVP<span class="sparkle-right" aria-hidden="true"></span></h2>
           <p>
             Please let us know which celebrations you'll be joining us for.
             We'll ask about:
@@ -740,7 +771,7 @@
             <li>Civil ceremony, Mairie de Strasbourg <span>Fri 30 Apr</span></li>
             <li>Symbolic ceremony, Château de Mairy <span>Sat 1 May</span></li>
             <li>Post-wedding lunch &amp; cellar tour <span>Sun 2 May</span></li>
-            <li>Any dietary requirements</li>
+            <li>Dietary requirements, shuttle seats &amp; any help you need</li>
           </ul>
           <a
             class="btn"
@@ -759,6 +790,16 @@
       </div>
     </footer>
 
-    <script src="static/js/script.js?v=18"></script>
+    <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+      <button class="lightbox-close" aria-label="Close">&times;</button>
+      <button class="lightbox-nav lightbox-prev" aria-label="Previous photo">&lsaquo;</button>
+      <figure>
+        <img alt="" />
+        <figcaption></figcaption>
+      </figure>
+      <button class="lightbox-nav lightbox-next" aria-label="Next photo">&rsaquo;</button>
+    </dialog>
+
+    <script src="static/js/script.js?v=22"></script>
   </body>
 </html>
