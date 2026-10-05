@@ -78,10 +78,10 @@ h2 {
 h2::after {
   content: "";
   display: block;
-  width: 120px;
-  height: 20px;
-  margin-top: 0.6rem;
-  background: var(--wave, url("../images/paint/wave-blue.webp")) no-repeat left center / contain;
+  width: 132px;
+  height: 28px;
+  margin-top: 0.5rem;
+  background: var(--wave, url("../images/crayon/wave-blue.webp")) no-repeat left center / contain;
 }
 
 .center h2::after {
@@ -329,8 +329,8 @@ section[id],
 .page-hero h1::after {
   content: "";
   display: block;
-  width: 150px;
-  height: 24px;
+  width: 170px;
+  height: 32px;
   margin: 0.7rem auto 0;
   background: var(--wave) no-repeat center / contain;
 }
@@ -357,8 +357,8 @@ section[id],
 /* "Plan your trip" link cards on the main view */
 #plan {
   --accent: var(--teal);
-  --wave: url("../images/paint/wave-blue.webp");
-  --ornament: url("../images/paint/sparkle-red.webp");
+  --wave: url("../images/crayon/wave-blue-short.webp");
+  --ornament: url("../images/crayon/sparkle-red.webp");
   --orn-w: 30px; --orn-h: 33px; --orn-rot: 10deg; --orn-top: -4px;
 }
 
@@ -392,13 +392,13 @@ section[id],
 }
 
 /* rotate the accent colour through the painted palette */
-#about { --accent: var(--red); --wave: url("../images/paint/wave-red.webp"); }
-#schedule { --accent: var(--sky); --wave: url("../images/paint/wave-blue.webp"); }
-#venue { --accent: var(--ochre); --wave: url("../images/paint/wave-ochre.webp"); }
-#faq { --accent: var(--teal); --wave: url("../images/paint/wave-teal-loop.webp"); }
-#things-to-do { --accent: var(--red); --wave: url("../images/paint/wave-tricolour.webp"); }
-#travel { --accent: var(--blue); --wave: url("../images/paint/wave-yellow.webp"); }
-#rsvp { --accent: var(--yellow); --wave: url("../images/paint/wave-tricolour.webp"); }
+#about { --accent: var(--red); --wave: url("../images/crayon/wave-red.webp"); }
+#schedule { --accent: var(--sky); --wave: url("../images/crayon/wave-blue.webp"); }
+#venue { --accent: var(--ochre); --wave: url("../images/crayon/wave-orange.webp"); }
+#faq { --accent: var(--teal); --wave: url("../images/crayon/wave-teal-loop.webp"); }
+#things-to-do { --accent: var(--red); --wave: url("../images/crayon/wave-blue-red.webp"); }
+#travel { --accent: var(--blue); --wave: url("../images/crayon/wave-yellow.webp"); }
+#rsvp { --accent: var(--yellow); --wave: url("../images/crayon/wave-blue-red.webp"); }
 
 /* a painted accent beside each section title */
 .section h2 {
@@ -419,34 +419,34 @@ section[id],
 }
 
 #about {
-  --ornament: url("../images/paint/dots.webp");
+  --ornament: url("../images/crayon/dots.webp");
   --orn-w: 34px; --orn-h: 38px; --orn-rot: 12deg;
 }
 #schedule {
-  --ornament: url("../images/paint/confetti.webp");
+  --ornament: url("../images/crayon/confetti.webp");
   --orn-w: 62px; --orn-h: 40px; --orn-top: -6px;
 }
 #venue {
-  --ornament: url("../images/paint/sparkle-yellow.webp");
+  --ornament: url("../images/crayon/sparkle-yellow.webp");
   --orn-w: 38px; --orn-h: 40px; --orn-rot: -8deg;
 }
 #faq {
-  --ornament: url("../images/paint/asterisk-blue.webp");
+  --ornament: url("../images/crayon/asterisk-blue.webp");
   --orn-w: 32px; --orn-h: 37px; --orn-rot: 10deg;
 }
 #things-to-do {
-  --ornament: url("../images/paint/splash.webp");
+  --ornament: url("../images/crayon/splash.webp");
   --orn-w: 40px; --orn-h: 44px; --orn-top: -16px;
 }
 #travel {
-  --ornament: url("../images/paint/dashes.webp");
+  --ornament: url("../images/crayon/dashes.webp");
   --orn-w: 42px; --orn-h: 35px; --orn-top: -8px; --orn-rot: -6deg;
 }
 
 /* the teal wave has a loop, so give it a little more room */
 #faq h2::after {
-  width: 140px;
-  height: 27px;
+  width: 150px;
+  height: 38px;
 }
 
 .center h2::after {
@@ -455,7 +455,7 @@ section[id],
 
 /* painted sparkles either side of the RSVP title */
 #rsvp {
-  --ornament: url("../images/paint/sparkle-yellow.webp");
+  --ornament: url("../images/crayon/sparkle-yellow.webp");
   --orn-w: 44px; --orn-h: 46px; --orn-top: -14px; --orn-rot: -8deg;
 }
 
@@ -470,7 +470,7 @@ section[id],
   top: 4px;
   width: 30px;
   height: 33px;
-  background: url("../images/paint/sparkle-red.webp") no-repeat center / contain;
+  background: url("../images/crayon/sparkle-red.webp") no-repeat center / contain;
   transform: rotate(10deg);
 }
 
@@ -488,15 +488,6 @@ section[id],
   margin: 0 0 1rem;
 }
 
-.notice {
-  display: inline-block;
-  border: 1px dashed var(--line);
-  border-radius: var(--radius);
-  padding: 0.6rem 1.1rem;
-  font-size: 0.92rem;
-  color: var(--muted);
-  background: var(--white);
-}
 
 .section-intro {
   max-width: 720px;
@@ -1231,10 +1222,10 @@ section[id],
 .site-footer::before {
   content: "";
   display: block;
-  width: min(280px, 70%);
-  height: 24px;
+  width: min(300px, 70%);
+  height: 34px;
   margin: 0 auto 1.1rem;
-  background: url("../images/paint/wave-long-tricolour.webp") no-repeat center / contain;
+  background: url("../images/crayon/wave-long-blue.webp") no-repeat center / contain;
 }
 
 /* ---------- Motion & responsive ---------- */
