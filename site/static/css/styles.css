@@ -285,6 +285,102 @@ h4 {
   flex-wrap: wrap;
 }
 
+/* ---------- Views (single page) ---------- */
+
+.view[hidden] {
+  display: none;
+}
+
+section[id],
+.view {
+  scroll-margin-top: 64px;
+}
+
+.nav-links a.active {
+  color: var(--blue);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+}
+
+/* banner at the top of the Travel / Things to do views */
+.page-hero {
+  position: relative;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  min-height: clamp(260px, 40vh, 380px);
+  padding: 3rem 0;
+  background: var(--paper) url("../images/hero-frame.webp") no-repeat center / cover;
+}
+
+.page-hero .eyebrow {
+  margin-bottom: 0.6rem;
+}
+
+.page-hero h1 {
+  position: relative;
+  display: inline-block;
+  font-size: clamp(2.6rem, 6vw, 4.4rem);
+  font-weight: 500;
+  margin: 0;
+}
+
+.page-hero h1::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 24px;
+  margin: 0.7rem auto 0;
+  background: var(--wave) no-repeat center / contain;
+}
+
+.page-hero h1::before {
+  content: "";
+  position: absolute;
+  left: calc(100% + 18px);
+  top: var(--orn-top, -10px);
+  width: var(--orn-w, 40px);
+  height: var(--orn-h, 42px);
+  background: var(--ornament, none) no-repeat center / contain;
+  transform: rotate(var(--orn-rot, 0deg));
+}
+
+.page-body {
+  padding-top: 3.5rem;
+}
+
+.page-next {
+  padding-top: 1rem;
+}
+
+/* "Plan your trip" link cards on the main view */
+#plan {
+  --accent: var(--teal);
+  --wave: url("../images/paint/wave-blue.webp");
+  --ornament: url("../images/paint/sparkle-red.webp");
+  --orn-w: 30px; --orn-h: 33px; --orn-rot: 10deg; --orn-top: -4px;
+}
+
+.link-card {
+  display: block;
+  color: var(--ink);
+  text-decoration: none;
+  transition:
+    transform 250ms ease,
+    box-shadow 250ms ease;
+}
+
+.link-card:hover {
+  color: var(--ink);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(40, 30, 20, 0.12);
+}
+
+.link-card h3 {
+  font-size: 1.7rem;
+}
+
 /* ---------- Sections ---------- */
 
 .section {

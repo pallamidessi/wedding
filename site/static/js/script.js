@@ -13,20 +13,52 @@ if (menuButton && navLinks) {
   });
 }
 
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", (event) => {
-    const href = anchor.getAttribute("href");
-    if (!href || href === "#") {
-      return;
-    }
-    const target = document.querySelector(href);
-    if (!target) {
-      return;
-    }
-    event.preventDefault();
-    target.scrollIntoView({ behavior: "smooth", block: "start" });
+// Single-page navigation: "#travel" and "#things-to-do" show their own view,
+// any other hash shows the main view and scrolls to that section.
+const views = [...document.querySelectorAll(".view")];
+const baseTitle = document.title;
+let currentView = null;
+
+function route(hash, smooth) {
+  const id = (hash || "").replace(/^#/, "") || "home";
+  const pageView = views.find((view) => view.dataset.view === id);
+  const target = pageView || views.find((view) => view.dataset.view === "home");
+  const switched = target !== currentView;
+
+  views.forEach((view) => {
+    view.hidden = view !== target;
   });
+  currentView = target;
+
+  const title = target.dataset.title;
+  document.title = title ? `${title} | ${baseTitle}` : baseTitle;
+
+  document.querySelectorAll("#navLinks a").forEach((link) => {
+    const active = link.getAttribute("href") === `#${target.dataset.view}`;
+    link.classList.toggle("active", active && target.dataset.view !== "home");
+  });
+
+  const behavior = smooth && !switched ? "smooth" : "instant";
+  const section = pageView ? null : document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior, block: "start" });
+  } else {
+    window.scrollTo({ top: 0, behavior });
+  }
+}
+
+document.addEventListener("click", (event) => {
+  const link = event.target.closest('a[href^="#"]');
+  if (!link || event.metaKey || event.ctrlKey || event.shiftKey) return;
+  const hash = link.getAttribute("href");
+  if (hash === "#") return;
+  event.preventDefault();
+  if (hash !== location.hash) history.pushState(null, "", hash);
+  route(hash, true);
 });
+
+window.addEventListener("popstate", () => route(location.hash, false));
+route(location.hash, false);
 
 function setupSwitcher(buttonSelector, buttonAttr, panelAttr) {
   const buttons = document.querySelectorAll(buttonSelector);
